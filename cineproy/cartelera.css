@@ -1,0 +1,322 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #000;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* Encabezado */
+.main-header {
+background: #1a1a1a;
+padding: 1rem 2rem;
+display: flex;
+justify-content: space-between;
+align-items: center;
+border-bottom: 2px solid #bfa03c;
+}
+
+.logo {
+font-size: 1.8rem;
+font-weight: bold;
+color: #bfa03c;
+}
+
+.main-nav a {
+color: #e0e0e0;
+text-decoration: none;
+margin-left: 1.5rem;
+transition: color 0.3s ease;
+}
+
+.main-nav a:hover,
+.main-nav .active {
+color: #bfa03c;
+font-weight: bold;
+}
+
+/* Barra superior dentro del header */
+.navbar {
+width: 100%;
+position: absolute;
+top: 0;
+left: 0;
+padding: 20px 40px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+z-index: 10;
+background: rgba(0, 0, 0, 0.5);
+border-bottom: 2px solid #d4af37;
+}
+
+.logo {
+font-size: 1.8rem;
+color: #ffd700;
+font-weight: bold;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+
+.nav-links a {
+margin-left: 25px;
+text-decoration: none;
+color: #fff;
+font-weight: 500;
+transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+color: #d4af37;
+}
+
+
+.btn-hero {
+  background-color: #d4af37;
+  color: black;
+  padding: 14px 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 40px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+}
+
+.btn-hero:hover {
+  background-color: white;
+  color: black;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+/* Sección cartelera */
+.cartelera {
+  padding: 60px 20px;
+  background-color: #000;
+}
+
+.cartelera h2 {
+  font-size: 2.8rem;
+  color: #dcdcdc;
+  margin-bottom: 20px;
+}
+
+/* Buscador */
+.buscador {
+  margin: 20px auto 50px;
+  max-width: 400px;
+}
+
+.buscador input {
+  width: 100%;
+  padding: 12px 20px;
+  border-radius: 30px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 1rem;
+  backdrop-filter: blur(6px);
+  outline: none;
+}
+
+.buscador input::placeholder {
+  color: #ccc;
+}
+
+.peliculas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 25px;
+  padding: 0 20px;
+}
+
+.pelicula-card {
+  position: relative;
+  background-color: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.4s ease;
+}
+
+.pelicula-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+}
+
+.pelicula-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.pelicula-card:hover img {
+  transform: scale(1.1);
+}
+
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 15px;
+  color: white;
+}
+
+.card-overlay.glass {
+  backdrop-filter: blur(6px);
+  background-color: rgba(0, 0, 0, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.pelicula-card:hover .card-overlay {
+  opacity: 1;
+}
+
+.card-overlay h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.card-overlay .meta {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  color: #ffd700;
+}
+
+.card-overlay p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+.detalles-ocultos {
+  display: none; /* Ocultar los detalles por defecto */
+  padding-top: 10px;
+}
+
+.pelicula-card.expanded .detalles-ocultos {
+  display: block; /* Mostrar los detalles cuando la tarjeta está expandida */
+}
+
+
+.card-overlay a,
+.btn-mini {
+  background-color: #d4af37;
+  color: black;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.card-overlay a:hover,
+.btn-mini:hover {
+  background-color: #fff;
+  color: #000;
+}
+footer {
+  background-color: #1a1a1a;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+/* Estilos para pantallas más pequeñas (móviles) */
+@media (max-width: 768px) {
+  /* Reducción de tamaño del encabezado */
+  .header-content h1 {
+      font-size: 1.8rem;
+  }
+
+  .header-content p {
+      font-size: 1rem;
+      padding: 0 10px;
+  }
+
+  .btn-hero {
+      font-size: 1rem;
+      padding: 10px 20px;
+  }
+
+  /* Estilos para el buscador */
+  .buscador .container input {
+      width: 100%;
+      padding: 12px;
+      font-size: 1rem;
+  }
+
+  /* Ajustes para las tarjetas de películas */
+  .peliculas-grid {
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 15px;
+  }
+
+  .pelicula-card {
+      max-width: 100%;
+      margin: 0;
+  }
+
+  .card-overlay h3 {
+      font-size: 1.4rem;
+  }
+
+  .card-overlay .meta {
+      font-size: 1rem;
+  }
+
+  .card-overlay p {
+      font-size: 0.9rem;
+  }
+
+  .btn-mini {
+      font-size: 0.9rem;
+      padding: 8px 16px;
+  }
+
+  /* Estilos del pie de página */
+  footer p {
+      font-size: 0.9rem;
+      padding: 15px;
+  }
+}
+
+/* Estilos para pantallas más grandes (tabletas y escritorios) */
+@media (min-width: 769px) {
+  .peliculas-grid {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+  }
+
+  .pelicula-card {
+      max-width: 350px;
+  }
+
+  .header-content h1 {
+      font-size: 2.5rem;
+  }
+
+  .header-content p {
+      font-size: 1.2rem;
+  }
+
+  .btn-hero {
+      font-size: 1.2rem;
+  }
+}
+
+

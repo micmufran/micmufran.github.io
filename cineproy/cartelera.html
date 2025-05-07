@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineLuxx - Cartelera</title>
+    <link rel="stylesheet" href="cartelera.css">
+</head>
+<body>
+
+    <!-- Encabezado -->
+<header class="main-header">
+    <div class="logo">🎬 CineLuxx</div>
+    <nav class="main-nav">
+      <a href="movies.html">Inicio</a>
+      <a href="cartelera.html" class="active">Cartelera</a>
+      <a href="estrenos.html">Estrenos</a>
+      <a href="boletos.html">Boletos</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+  </header>
+  
+
+    <!-- Buscador -->
+    <section class="buscador">
+        <div class="container">
+            <input type="text" id="input-busqueda" placeholder="🔍 Buscar película..." onkeyup="filtrarPeliculas()">
+        </div>
+    </section>
+
+    <!-- Cartelera -->
+    <section id="peliculas" class="cartelera">
+        <div class="container">
+            <h2>🎬 Últimos Estrenos</h2>
+            <div class="peliculas-grid" id="peliculas-grid">
+                                <!-- Película 1 -->
+                <div class="pelicula-card">
+                    <img src="https://m.media-amazon.com/images/I/81ZtUrj87ZL._AC_UF894,1000_QL80_.jpg" alt="Enredados">
+                    <div class="card-overlay glass">
+                        <h3>Enredados</h3>
+                        <div class="meta">★ 4.8 · 100 min</div>
+                        <p>Aventura mágica, llena de humor y acción.</p>
+
+                        <!-- Detalles ocultos -->
+                        <div class="detalles-ocultos">
+                            <p>Sinopsis completa: Rapunzel, una princesa con un largo cabello mágico, busca libertad y aventura fuera de su torre. En su viaje, conoce a un ladrón y enfrenta una serie de desafíos que le ayudarán a descubrir su verdadero destino.</p>
+                            <p>Actores principales: Mandy Moore, Zachary Levi, Ron Perlman</p>
+                            <p>Fecha de estreno: 2025</p>
+                        </div>
+
+                        <a href="javascript:void(0);" class="btn-mini" onclick="verMas(this)">🎬 Ver más</a>
+                    </div>
+                </div>
+
+                <!-- Película 2 -->
+                <div class="pelicula-card">
+                    <img src="https://statics.cinemex.com/movie_posters/jEN1ERk7guKrlBY-750x1125.jpg" alt="Minecraft">
+                    <div class="card-overlay glass">
+                        <h3>Minecraft</h3>
+                        <div class="meta">★ 4.7 · 110 min</div>
+                        <p>Un mundo de bloques, un nuevo comienzo.</p>
+
+                        <!-- Detalles ocultos -->
+                        <div class="detalles-ocultos">
+                            <p>Sinopsis completa: En un mundo basado en bloques, un joven héroe debe enfrentarse a enormes criaturas y obstáculos mientras lucha por restaurar el orden y salvar su mundo de la destrucción.</p>
+                            <p>Actores principales: Steve, Alex, Minecraft Steve</p>
+                            <p>Fecha de estreno: 2025</p>
+                        </div>
+
+                        <a href="javascript:void(0);" class="btn-mini" onclick="verMas(this)">🎬 Ver más</a>
+                    </div>
+                </div>
+
+                <!-- Película 3 -->
+                <div class="pelicula-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/3/32/Superman_%282025_film%29_poster.jpg" alt="Superman">
+                    <div class="card-overlay glass">
+                        <h3>Superman</h3>
+                        <div class="meta">★ 5.0 · 120 min</div>
+                        <p>El hombre de acero regresa para salvar el mundo.</p>
+
+                        <!-- Detalles ocultos -->
+                        <div class="detalles-ocultos">
+                            <p>Sinopsis completa: Superman debe enfrentar a nuevos villanos y salvar a la humanidad una vez más, mientras lucha contra su destino y su identidad secreta como Clark Kent.</p>
+                            <p>Actores principales: Henry Cavill, Amy Adams, Jesse Eisenberg</p>
+                            <p>Fecha de estreno: 2025</p>
+                        </div>
+
+                        <a href="javascript:void(0);" class="btn-mini" onclick="verMas(this)">🎬 Ver más</a>
+                    </div>
+                </div>
+
+                <!-- Película 4 -->
+                <div class="pelicula-card">
+                    <img src="https://i0.wp.com/tomatazos.buscafs.com/2025/01/BlancaNieves-Poster.jpg?quality=75&strip=all" alt="Blancanieves">
+                    <div class="card-overlay glass">
+                        <h3>Blancanieves</h3>
+                        <div class="meta">★ 4.9 · 100 min</div>
+                        <p>La magia vuelve a la pantalla grande.</p>
+
+                        <!-- Detalles ocultos -->
+                        <div class="detalles-ocultos">
+                            <p>Sinopsis completa: Blancanieves, la joven princesa, escapa de su malvada madrastra y se adentra en el bosque donde hace nuevos amigos y descubre la magia dentro de ella.</p>
+                            <p>Actores principales: Lily Collins, Julia Roberts</p>
+                            <p>Fecha de estreno: 2025</p>
+                        </div>
+
+                        <a href="javascript:void(0);" class="btn-mini" onclick="verMas(this)">🎬 Ver más</a>
+                    </div>
+                </div>
+
+                <!-- Película 5 -->
+                <div class="pelicula-card">
+                    <img src="https://lumiere-a.akamaihd.net/v1/images/rochelle_teaser2_poster_las_9a24549d.jpeg?region=0%2C0%2C770%2C1100" alt="Capitán América">
+                    <div class="card-overlay glass">
+                        <h3>Capitán América</h3>
+                        <div class="meta">★ 5.0 · 130 min</div>
+                        <p>La lucha por la libertad nunca termina.</p>
+
+                        <!-- Detalles ocultos -->
+                        <div class="detalles-ocultos">
+                            <p>Sinopsis completa: Capitán América se enfrenta a una nueva amenaza global mientras lucha por mantener la paz en el mundo, enfrentando enemigos que desafían todo lo que conoce.</p>
+                            <p>Actores principales: Chris Evans, Scarlett Johansson, Anthony Mackie</p>
+                            <p>Fecha de estreno: 2025</p>
+                        </div>
+
+                        <a href="javascript:void(0);" class="btn-mini" onclick="verMas(this)">🎬 Ver más</a>
+                    </div>
+                </div>
+
+                <!-- Película 6 -->
+                <div class="pelicula-card">
+                    <img src="https://rukminim2.flixcart.com/image/850/1000/ju2z6a80/poster/v/9/g/medium-endgameart-avengers-endgame-new-poster-for-room-office-original-imaff9ecy3wgbdtv.jpeg?q=20&crop=false" alt="Avengers: Endgame">
+                    <div class="card-overlay glass">
+                        <h3>Avengers: Endgame</h3>
+                        <div class="meta">★ 4.9 · 180 min</div>
+                        <p>El épico final de la saga de los Vengadores.</p>
+
+                        <!-- Detalles ocultos -->
+                        <div class="detalles-ocultos">
+                            <p>Sinopsis completa: Los Vengadores deben unir sus fuerzas para enfrentar a Thanos en una batalla final que podría decidir el destino del universo.</p>
+                            <p>Actores principales: Robert Downey Jr., Chris Hemsworth, Scarlett Johansson</p>
+                            <p>Fecha de estreno: 2025</p>
+                        </div>
+
+                        <a href="javascript:void(0);" class="btn-mini" onclick="verMas(this)">🎬 Ver más</a>
+                    </div>
+                </div>
+
+                <!-- Película 7 -->
+                <div class="pelicula-card">
+                    <img src="https://preview.redd.it/vr2x2w3u180d1.jpeg?auto=webp&s=62f03c341f4b1fe6110edef5599ab6d3fcc4b6b2" alt="Spider-Man: Homecoming">
+                    <div class="card-overlay glass">
+                        <h3>Spider-Man: Homecoming</h3>
+                        <div class="meta">★ 4.8 · 130 min</div>
+                        <p>El regreso de Spider-Man al Universo Marvel.</p>
+
+                        <!-- Detalles ocultos -->
+                        <div class="detalles-ocultos">
+                            <p>Sinopsis completa: Peter Parker, ahora Spider-Man, enfrenta nuevos desafíos mientras se adapta a su vida como superhéroe y enfrenta al villano Vulture.</p>
+                            <p>Actores principales: Tom Holland, Michael Keaton, Zendaya</p>
+                            <p>Fecha de estreno: 2025</p>
+                        </div>
+
+                        <a href="javascript:void(0);" class="btn-mini" onclick="verMas(this)">🎬 Ver más</a>
+                    </div>
+                </div>
+
+                <!-- Película 8 -->
+                <div class="pelicula-card">
+                    <img src="https://m.media-amazon.com/images/I/71sqRjTQSjL.jpg" alt="Guardianes de la Galaxia">
+                    <div class="card-overlay glass">
+                        <h3>Guardianes de la Galaxia</h3>
+                        <div class="meta">★ 4.8 · 150 min</div>
+                        <p>Un equipo de héroes intergalácticos lucha por la paz.</p>
+
+                        <!-- Detalles ocultos -->
+                        <div class="detalles-ocultos">
+                            <p>Sinopsis completa: Un grupo de inadaptados se une para salvar el universo de una amenaza intergaláctica. Con un equipo diverso, cada uno con su propio estilo, las aventuras comienzan.</p>
+                            <p>Actores principales: Chris Pratt, Zoe Saldana, Dave Bautista</p>
+                            <p>Fecha de estreno: 2025</p>
+                        </div>
+
+                        <a href="javascript:void(0);" class="btn-mini" onclick="verMas(this)">🎬 Ver más</a>
+                    </div>
+                </div>
+
+                <!-- Película 9 -->
+                <div class="pelicula-card">
+                    <img src="https://lumiere-a.akamaihd.net/v1/images/image_3f5716f2.jpeg?region=0,0,540,810" alt="Lightyear">
+                    <div class="card-overlay glass">
+                        <h3>Lightyear</h3>
+                        <div class="meta">★ 4.5 · 100 min</div>
+                        <p>El origen de Buzz Lightyear, el héroe de Toy Story.</p>
+
+                        <!-- Detalles ocultos -->
+                        <div class="detalles-ocultos">
+                            <p>Sinopsis completa: Buzz Lightyear, el astronauta que inspiró al juguete, vive una serie de aventuras espaciales mientras lucha por encontrar su camino de regreso a casa.</p>
+                            <p>Actores principales: Chris Evans, Keke Palmer</p>
+                            <p>Fecha de estreno: 2025</p>
+                        </div>
+
+                        <a href="javascript:void(0);" class="btn-mini" onclick="verMas(this)">🎬 Ver más</a>
+                    </div>
+                </div>
+                <!-- Película 10 -->
+                <div class="pelicula-card">
+                    <img src="https://www.riocinemas.mx/img/moviesImg/PANDIS.jpg" alt="Kung Fu Panda 4">
+                    <div class="card-overlay glass">
+                        <h3>Kung Fu Panda 4</h3>
+                        <div class="meta">★ 4.7 · 110 min</div>
+                        <p>El regreso de Po para una nueva aventura épica.</p>
+
+                        <!-- Detalles ocultos -->
+                        <div class="detalles-ocultos">
+                            <p>Sinopsis completa: Po regresa para una nueva misión épica, esta vez con nuevos aliados y enemigos que pondrán a prueba sus habilidades como el Dragón Guerrero.</p>
+                            <p>Actores principales: Jack Black, Angelina Jolie, Dustin Hoffman</p>
+                            <p>Fecha de estreno: 2025</p>
+                        </div>
+
+                        <a href="javascript:void(0);" class="btn-mini" onclick="verMas(this)">🎬 Ver más</a>
+                    </div>
+                </div>
+
+                <!-- Película 11 -->
+                <div class="pelicula-card">
+                    <img src="https://pics.filmaffinity.com/Dune_Parte_Dos-288678616-large.jpg" alt="Dune Parte 2">
+                    <div class="card-overlay glass">
+                        <h3>Dune Parte 2</h3>
+                        <div class="meta">★ 4.8 · 150 min</div>
+                        <p>La continuación de la épica saga de Dune.</p>
+
+                        <!-- Detalles ocultos -->
+                        <div class="detalles-ocultos">
+                            <p>Sinopsis completa: La lucha por el control del planeta Arrakis continúa mientras los personajes enfrentan nuevos desafíos y alianzas en un juego de poder y supervivencia.</p>
+                            <p>Actores principales: Timothée Chalamet, Zendaya, Oscar Isaac</p>
+                            <p>Fecha de estreno: 2025</p>
+                        </div>
+
+                        <a href="javascript:void(0);" class="btn-mini" onclick="verMas(this)">🎬 Ver más</a>
+                    </div>
+                </div>
+
+                <!-- Película 12 -->
+                <div class="pelicula-card">
+                    <img src="https://lumiere-a.akamaihd.net/v1/images/poster_avatar_2_el_camino_del_agua_1d2e37ee.jpeg?region=0,0,752,1080" alt="Avatar 2">
+                    <div class="card-overlay glass">
+                        <h3>Avatar 2</h3>
+                        <div class="meta">★ 4.9 · 160 min</div>
+                        <p>El regreso a Pandora.</p>
+
+                        <!-- Detalles ocultos -->
+                        <div class="detalles-ocultos">
+                            <p>Sinopsis completa: Jake y Neytiri enfrentan nuevos retos en el mundo de Pandora mientras luchan por su familia y su hogar, en una aventura que cambiará sus vidas.</p>
+                            <p>Actores principales: Sam Worthington, Zoe Saldana, Sigourney Weaver</p>
+                            <p>Fecha de estreno: 2025</p>
+                        </div>
+
+                        <a href="javascript:void(0);" class="btn-mini" onclick="verMas(this)">🎬 Ver más</a>
+                    </div>
+                </div>
+
+                <!-- Película 13 -->
+                <div class="pelicula-card">
+                    <img src="https://images.squarespace-cdn.com/content/v1/6145a7b457c18a3bdc94fef6/d38ebaa7-1284-4d6b-9ec8-1af1677c50c9/wonka_khdp.jpg" alt="Wonka">
+                    <div class="card-overlay glass">
+                        <h3>Wonka</h3>
+                        <div class="meta">★ 4.6 · 125 min</div>
+                        <p>El origen de Willy Wonka, el mago del chocolate.</p>
+
+                        <!-- Detalles ocultos -->
+                        <div class="detalles-ocultos">
+                            <p>Sinopsis completa: La película nos lleva al pasado, donde conocemos al joven Willy Wonka mientras empieza a desarrollar sus mágicas habilidades para crear el más maravilloso chocolate del mundo.</p>
+                            <p>Actores principales: Timothée Chalamet, Olivia Colman, Sally Hawkins</p>
+                            <p>Fecha de estreno: 2025</p>
+                        </div>
+
+                        <a href="javascript:void(0);" class="btn-mini" onclick="verMas(this)">🎬 Ver más</a>
+                    </div>
+                </div>
+
+                <!-- Película 14 -->
+                <div class="pelicula-card">
+                    <img src="https://lumiere-a.akamaihd.net/v1/images/1_intensamente_2_payoff_banner_pre_1_aa3d9114.png" alt="Intensamente 2">
+                    <div class="card-overlay glass">
+                        <h3>Intensamente 2</h3>
+                        <div class="meta">★ 4.8 · 120 min</div>
+                        <p>Las emociones regresan en esta secuela de Pixar.</p>
+
+                        <!-- Detalles ocultos -->
+                        <div class="detalles-ocultos">
+                            <p>Sinopsis completa: Riley regresa con nuevas emociones y recuerdos. A medida que crece, las emociones tienen que adaptarse a su vida cambiando y enfrentando nuevos desafíos.</p>
+                            <p>Actores principales: Amy Poehler, Mindy Kaling, Bill Hader</p>
+                            <p>Fecha de estreno: 2025</p>
+                        </div>
+
+                        <a href="javascript:void(0);" class="btn-mini" onclick="verMas(this)">🎬 Ver más</a>
+                    </div>
+                </div>
+
+                <!-- Película 15 -->
+                <div class="pelicula-card">
+                    <img src="https://i.redd.it/xapup5pmb0t91.jpg" alt="Deadpool 3">
+                    <div class="card-overlay glass">
+                        <h3>Deadpool 3</h3>
+                        <div class="meta">★ 4.9 · 125 min</div>
+                        <p>El anti-héroe regresa para más caos.</p>
+
+                        <!-- Detalles ocultos -->
+                        <div class="detalles-ocultos">
+                            <p>Sinopsis completa: Deadpool se enfrenta a nuevos villanos, mientras forma alianzas inesperadas con otros héroes de otros universos, dentro de un mundo lleno de caos, destruccion y una comedia excelente</p>
+                            <p>Actores principales: Ryan Reynolds, Hugh Jackman, Morena Baccarin</p>
+                            <p>Fecha de estreno: 2025</p>
+                        </div>
+
+                        <a href="javascript:void(0);" class="btn-mini" onclick="verMas(this)">🎬 Ver más</a>
+                    </div>
+                </div>
+
+                <!-- Película 16 -->
+                <div class="pelicula-card">
+                    <img src="https://m.media-amazon.com/images/M/MV5BNjhiMmRhMzYtYjUxOS00YjhiLWI5MmQtNzFkMGFiZmVlZjRkXkEyXkFqcGc@._V1_.jpg" alt="Megalodon 2">
+                    <div class="card-overlay glass">
+                        <h3>Megalodon 2</h3>
+                        <div class="meta">★ 4.6 · 110 min</div>
+                        <p>El monstruo prehistórico regresa para más acción.</p>
+
+                        <!-- Detalles ocultos -->
+                        <div class="detalles-ocultos">
+                            <p>Sinopsis completa: Un equipo de científicos y exploradores luchan por sobrevivir y poder detener al Megalodón mientras descubren muchisimas más criaturas prehistóricas y muy peligrosas, que pondran en riesgo a millones de niños y adultos.</p>
+                            <p>Actores principales: Jason Statham, Ruby Rose, Cliff Curtis</p>
+                            <p>Fecha de estreno: 2025</p>
+                        </div>
+
+                        <a href="javascript:void(0);" class="btn-mini" onclick="verMas(this)">🎬 Ver más</a>
+                    </div>
+                </div>
+
+                <!-- Película 17 -->
+                <div class="pelicula-card">
+                    <img src="https://lumiere-a.akamaihd.net/v1/images/image_167d5a00.jpeg?region=0,0,540,810" alt="The Marvels">
+                    <div class="card-overlay glass">
+                        <h3>The Marvels</h3>
+                        <div class="meta">★ 4.8 · 140 min</div>
+                        <p>Una nueva aventura de Marvel con nuevos héroes.</p>
+
+                        <!-- Detalles ocultos -->
+                        <div class="detalles-ocultos">
+                            <p>Sinopsis completa: Carol Danvers, Monica Rambeau y Kamala Khan deberan de unir fuerzas por que tendran que enfrentarse a una amenaza cósmica muy poderosa que pondra en peligro a los mundos y a todo nuestro universo.</p>
+                            <p>Actores principales: Brie Larson, Teyonah Parris, Iman Vellani</p>
+                            <p>Fecha de estreno: 2025</p>
+                        </div>
+
+                        <a href="javascript:void(0);" class="btn-mini" onclick="verMas(this)">🎬 Ver más</a>
+                    </div>
+                </div>
+
+                <!-- Película 18 -->
+                <div class="pelicula-card">
+                    <img src="https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:knj5sw5al3sukl6vhkpi7637/bafkreig4r6f2zrjexclbdodrib3qrkknoabe3qsk73j4pehfadf4ruhzwq@jpeg" alt="Sonic 3">
+                    <div class="card-overlay glass">
+                        <h3>Sonic 3</h3>
+                        <div class="meta">★ 4.7 · 100 min</div>
+                        <p>La nueva aventura del erizo más rápido del mundo.</p>
+
+                        <!-- Detalles ocultos -->
+                        <div class="detalles-ocultos">
+                            <p>Sinopsis completa: Sonic regresa para una nueva aventura llena de acción, velocidad y un poco de sorpresas enfrentándose a nuevos villanos y aliados mientras lucha por salvar el mundo.</p>
+                            <p>Actores principales: Ben Schwartz, Idris Elba, Jim Carrey</p>
+                            <p>Fecha de estreno: 2025</p>
+                        </div>
+
+                        <a href="javascript:void(0);" class="btn-mini" onclick="verMas(this)">🎬 Ver más</a>
+                    </div>
+                </div>
+                <!-- Película 19 -->
+                <div class="pelicula-card">
+                    <img src="https://depor.com/resizer/v2/N3YRJZZQNZELPLDYW3BSPJH3AM.jpg?auth=ac7d96c8347437ab3e5f8cd75c993e0da56e11f010cdb6783d4a9ca093ade79b&width=620&quality=75&smart=true" alt="donde estan las rubias">
+                    <div class="card-overlay glass">
+                        <h3>¿Y Donde Estan Las Rubias?</h3>
+                        <div class="meta">★ 5.0 · 150 min</div>
+                        <p>La comedia mas epica esta aqui.</p>
+
+                        <!-- Detalles ocultos -->
+                        <div class="detalles-ocultos">
+                            <p>Sinopsis completa: Agentes del FBI, tendran que descubrir un caso, pero tendran que darle un giro a su vida para poder conservar su trabajo, Convirtiendose en 2 mujeres muy preciosas.</p>
+                            <p>Actores principales: Henry Cavill, Amy Adams, Michael Shannon</p>
+                            <p>Fecha de estreno: 2025</p>
+                        </div>
+
+                        <a href="javascript:void(0);" class="btn-mini" onclick="verMas(this)">🎬 Ver más</a>
+                    </div>
+                </div>
+
+                <!-- Película 20 -->
+                <div class="pelicula-card">
+                    <img src="https://www.mubis.es/media/articles/31403/305111/spider-man-no-way-home-vuelve-a-los-cines-con-escenas-ineditas-original.jpg" alt="Blancanieves (Live Action)">
+                    <div class="card-overlay glass">
+                        <h3>Spider-Man: No Way Home</h3>
+                        <div class="meta">★ 4.9 · 130 min</div>
+                        <p>El gran encuentro de los tres Hombre Araña para salvar el universo.</p>
+
+                        <!-- Detalles ocultos -->
+                        <div class="detalles-ocultos">
+                            <p>Sinopsis completa: Peter Parker, al desear que todos se olviden de el, hizo un desastre al alterar el multiverso, asi mismo ocupara la ayuda de mas personas, el universo estara corriendo peligro.</p>
+                            <p>Actores principales: Rachel Zegler, Gal Gadot, Andrew Burnap</p>
+                            <p>Fecha de estreno: 2025</p>
+                        </div>
+
+                        <a href="javascript:void(0);" class="btn-mini" onclick="verMas(this)">🎬 Ver más</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <p>© 2025 CineLuxx | Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <script src="cartelera.js"></script>
+</body>
+</html>

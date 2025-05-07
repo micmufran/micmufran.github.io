@@ -1,0 +1,135 @@
+/* Fuente y colores generales */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #121212;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Encabezado fijo */
+header {
+  background-color: #000;
+  color: #ffd700;
+  padding: 15px 30px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+  color: #ffd700;
+}
+
+/* Contenido principal */
+main.confirmation-container {
+  padding-top: 100px;
+  padding-bottom: 40px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+h1 {
+  font-size: 40px;
+  color: #ffd700;
+  margin-bottom: 40px;
+  text-shadow: 2px 2px 5px rgba(255, 215, 0, 0.5);
+}
+
+.confirmation-content {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.9);
+  width: 90%;
+  max-width: 600px;
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.confirmation-content:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(255, 215, 0, 0.15);
+}
+
+.confirmation-content p {
+  font-size: 20px;
+  margin: 15px 0;
+  color: #eee;
+}
+
+.confirmation-content span {
+  color: #ffd700;
+  font-weight: bold;
+}
+
+/* Botones */
+.confirmation-actions {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  background-color: #ffd700;
+  color: #121212;
+  padding: 15px 30px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  min-width: 200px;
+}
+
+.btn:hover {
+  background-color: #e6b800;
+  transform: scale(1.05);
+}
+
+/* Pie de página */
+footer {
+  background-color: #000;
+  color: #ccc;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  margin-top: auto;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 28px;
+  }
+
+  .confirmation-content {
+    padding: 25px;
+  }
+
+  .confirmation-content p {
+    font-size: 16px;
+  }
+
+  .btn {
+    font-size: 16px;
+    padding: 12px 25px;
+    min-width: 160px;
+  }
+}

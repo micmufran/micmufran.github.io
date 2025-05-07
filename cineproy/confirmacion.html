@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Confirmación de Compra | CineLuxx</title>
+  <link rel="stylesheet" href="confirmacion.css">
+</head>
+<body>
+  <header>
+    <div class="logo">🎬 CineLuxx</div>
+  </header>
+
+  <main class="confirmation-container">
+    <h1>¡Compra Confirmada!</h1>
+
+    <div class="confirmation-content">
+      <p><strong>Película:</strong> <span id="pelicula-seleccionada"></span></p>
+      <p><strong>Fecha:</strong> <span id="fecha-seleccionada"></span></p>
+      <p><strong>Hora:</strong> <span id="hora-seleccionada"></span></p>
+      <p><strong>Asientos:</strong> <span id="asientos-seleccionados"></span></p>
+
+      <div class="confirmation-actions">
+        <button class="btn back-to-home">Regresar al Inicio</button>
+        <button class="btn new-purchase">Realizar otra compra</button>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 CineLuxx. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    // Obtener parámetros de la URL
+    const params = new URLSearchParams(window.location.search);
+    const pelicula = params.get("pelicula");
+    const fecha = params.get("fecha");
+    const hora = params.get("hora");
+    const asientos = params.getAll("asientos");
+
+    // Mostrar en el HTML
+    document.getElementById("pelicula-seleccionada").textContent = pelicula ? decodeURIComponent(pelicula) : "No seleccionada";
+    document.getElementById("fecha-seleccionada").textContent = fecha || "No seleccionada";
+    document.getElementById("hora-seleccionada").textContent = hora || "No seleccionada";
+    document.getElementById("asientos-seleccionados").textContent = asientos.length > 0 ? asientos.join(", ") : "No seleccionados";
+
+    // Funcionalidad para los botones
+    document.querySelector('.back-to-home').addEventListener('click', () => {
+      window.location.href = 'cartelera.html'; // Cambia esta URL a la página de inicio
+    });
+
+    document.querySelector('.new-purchase').addEventListener('click', () => {
+      window.location.href = 'boletos.html'; // Cambia esta URL a la página de compra de boletos
+    });
+  </script>
+</body>
+</html>
